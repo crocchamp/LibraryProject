@@ -30,8 +30,13 @@ addBookToLibrary("Hobbit", "JRR Tolkien", 100)
 
 function addToPage() {      //Where all the magic happens
     function remove(sel) {
-      return Array.from(document.querySelectorAll(sel)).forEach(el => el.remove());
-    }
+        const elements = Array.from(document.querySelectorAll(sel));
+        const title = elements[0].querySelector('p').innerText;
+        myLibrary = myLibrary.filter(book => book.title !== title);
+        localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+        elements.forEach(el => el.remove());
+      } //remove books from page AND localstorage
+      
   
     addBookToLibrary(
       document.querySelector("#bookTitle").value,
@@ -75,5 +80,7 @@ function addToPage() {      //Where all the magic happens
     });
     deleteButton.innerText = "DELETE";
     bookDiv.appendChild(deleteButton);
+
+    localStorage.setItem('myLibrary', JSON.stringify(myLibrary)); //adds books to localstorage
 
 }  
