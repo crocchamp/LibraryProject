@@ -1,0 +1,84 @@
+html {
+    background-color: rgb(34, 33, 33);
+    padding: 0px;
+    margin: 0px;
+    color: rgb(236, 228, 228);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: rgb(108, 108, 253);
+    justify-content: center;
+    margin-left: 30%; 
+    margin-right: 30%;
+    margin-top: 5%;
+}
+
+#Content {
+    display: flex;
+}
+
+#title {
+    padding: 0px;
+    margin: 10px;
+    text-align: center;
+    border: 1px;
+}
+
+.form {
+    display: flex;
+    margin-top: 4rem;
+    border: 5px solid rgb(108, 108, 253);
+    flex-direction: column;
+    width: 15%;
+    justify-items: center;
+    height: 210px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form input {
+    max-width: 80%;
+    text-align: center;
+    justify-self: center;
+}
+
+#pressMeDiv {
+    display: flex;
+    justify-content: left;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+#pressMe {
+    display: flex;
+    justify-self: left;
+    height: 2rem;
+    text-align: justify;
+}
+
+label {
+    text-align: center;
+}
+
+.Book {
+    display: flex;
+    flex-direction: column;
+    background-color: purple;
+    width: 200px;
+    text-align: center;
+    border: 5px solid grey;
+    margin: 5px 5px 5px 5px;
+}
+
+#Library {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-basis: 5;
+}
