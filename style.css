@@ -33,12 +33,12 @@ body {
 
 .header:after{
     content: '';
-    width: 84.3%;
+    width: 85.1%;
     height: 2px;
     background: black;
     position: absolute;
     left: 213px;
-    top: 82px;
+    top: 84px;
 }
 
 #Content {
@@ -48,7 +48,7 @@ body {
 form{
     display: flex;
     flex-direction: column;
-    height: 500px;
+    height: 606px;
     background-color: var(--colorThree);
     padding: 1em;
     justify-content: center;
@@ -63,19 +63,19 @@ form{
 }
 
 .footer {
-    height: 56px;
+    height: 5em;
     width: 100%;
     background-color: var(--colorOne);
 }
 
 .footer:after{
     content: '';
-    width: 84.3%;
+    width: 85.1%;
     height: 2px;
     background: black;
     position: absolute;
     left: 213px;
-    bottom: 56px;
+    bottom: 80px;
 }
 
 .Book {
