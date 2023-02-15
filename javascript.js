@@ -1,5 +1,3 @@
-let myLibrary = [] //The array that holds all the books
-
 class Book {        //Constructor that makes all the book objects
     constructor(title, author, pages, read) {
         this.title = title;
@@ -8,23 +6,16 @@ class Book {        //Constructor that makes all the book objects
     }
 }
 
+let myLibrary = JSON.parse(localStorage.getItem('myLibrary')) || [];
+ //The array that holds all the books
+ myLibrary.forEach(book => addToPage(book));
+//Adds any books from local storage to the page
+
 function addBookToLibrary(title, author, pageCount) { //Makes the book objects and adds them to myLibrary
     const newBook = new Book(title, author, pageCount);
     myLibrary.push(newBook);
+    localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
 }
-
-
-addBookToLibrary("Hobbit", "JRR Tolkien", 100) 
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -46,8 +37,11 @@ function addToPage() {      //Where all the magic happens
     //values from html input fields
     //and adds it to myLibrary
     //Adds the html elements to the page
+    
     var bookAdded = myLibrary.slice(-1)[0]; //Use this to get book properties
   
+    localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+    
     let bookDiv = document.createElement("div");
     bookDiv.setAttribute("id", bookAdded.title.replace(/\s/g, ""));
     bookDiv.classList.add("Book");
@@ -76,11 +70,10 @@ function addToPage() {      //Where all the magic happens
   
     let deleteButton = document.createElement("button");
     deleteButton.addEventListener("click", function() {
-    remove("#" + bookAdded.title.replace(/\s/g, ''));
-    });
+    remove(`#${bookAdded.title.replace(/\s/g, '')}`);
+    });      
     deleteButton.innerText = "DELETE";
     bookDiv.appendChild(deleteButton);
 
-    localStorage.setItem('myLibrary', JSON.stringify(myLibrary)); //adds books to localstorage
 
 }  

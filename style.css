@@ -1,84 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 html {
-    background-color: rgb(34, 33, 33);
+    background-color:var(--colorTwo);
     padding: 0px;
     margin: 0px;
     color: rgb(236, 228, 228);
+
+    --colorOne:#E8D2A6;
+    --colorTwo:#86A3B8;
+    --colorThree:#F48484;
+    --colorFour:#F55050;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    background-color: rgb(108, 108, 253);
-    justify-content: center;
-    margin-left: 30%; 
-    margin-right: 30%;
-    margin-top: 5%;
+    text-align: center;
+    background-color: var(--colorOne);
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: black;
+    font-size: x-large;
+}
+
+.header:after{
+    content: '';
+    width: 84.3%;
+    height: 2px;
+    background: black;
+    position: absolute;
+    left: 213px;
+    top: 82px;
 }
 
 #Content {
     display: flex;
 }
 
-#title {
-    padding: 0px;
-    margin: 10px;
-    text-align: center;
-    border: 1px;
-}
-
-.form {
+form{
     display: flex;
-    margin-top: 4rem;
-    border: 5px solid rgb(108, 108, 253);
     flex-direction: column;
-    width: 15%;
-    justify-items: center;
-    height: 210px;
-}
-
-form {
-    display: flex;
+    height: 500px;
+    background-color: var(--colorThree);
+    padding: 1em;
     justify-content: center;
-    flex-direction: column;
+    margin-right: 30px;
+    border-right: 2px solid black;
+    color: white;
 }
 
-form input {
-    max-width: 80%;
-    text-align: center;
-    justify-self: center;
-}
-
-#pressMeDiv {
+#Library {
     display: flex;
-    justify-content: left;
-    margin-top: 1%;
-    margin-left: 2%;
+    flex-wrap: wrap;
 }
 
-#pressMe {
-    display: flex;
-    justify-self: left;
-    height: 2rem;
-    text-align: justify;
+.footer {
+    height: 56px;
+    width: 100%;
+    background-color: var(--colorOne);
 }
 
-label {
-    text-align: center;
+.footer:after{
+    content: '';
+    width: 84.3%;
+    height: 2px;
+    background: black;
+    position: absolute;
+    left: 213px;
+    bottom: 56px;
 }
 
 .Book {
     display: flex;
     flex-direction: column;
-    background-color: purple;
-    width: 200px;
+    background-color: var(--colorThree);
+    height: 150px;
+    width: 100px;
+    border: 2px solid black;
+    margin: 5px;
+    color: black;
+    justify-content: space-evenly;
     text-align: center;
-    border: 5px solid grey;
-    margin: 5px 5px 5px 5px;
 }
 
-#Library {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-basis: 5;
-}
