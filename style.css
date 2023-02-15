@@ -29,6 +29,7 @@ body {
     padding-bottom: 1%;
     color: black;
     font-size: x-large;
+    font-family: 'Bungee Shade', cursive;
 }
 
 .header:after{
@@ -38,7 +39,7 @@ body {
     background: black;
     position: absolute;
     left: 213px;
-    top: 84px;
+    top: 86px;
 }
 
 #Content {
@@ -75,7 +76,7 @@ form{
     background: black;
     position: absolute;
     left: 213px;
-    bottom: 80px;
+    bottom: 77px;
 }
 
 .Book {
