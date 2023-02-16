@@ -16,17 +16,22 @@ html {
 
 }
 
+
+
 body {
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+
 }
 
 .header {
     text-align: center;
     background-color: var(--colorOne);
-    width: 100%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    width: 100vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
     color: black;
     font-size: x-large;
     font-family: 'Bungee Shade', cursive;
@@ -39,7 +44,7 @@ body {
     background: black;
     position: absolute;
     left: 213px;
-    top: 86px;
+    top: 75px;
 }
 
 #Content {
@@ -49,7 +54,7 @@ body {
 form{
     display: flex;
     flex-direction: column;
-    height: 606px;
+    min-height: 75vh;
     background-color: var(--colorThree);
     padding: 1em;
     justify-content: center;
@@ -61,12 +66,16 @@ form{
 #Library {
     display: flex;
     flex-wrap: wrap;
+    overflow: auto;
+    max-height: 75vh;
 }
 
 .footer {
-    height: 5em;
+    min-height: 12vh;
     width: 100%;
     background-color: var(--colorOne);
+    overflow: auto;
+    position: fixed;
 }
 
 .footer:after{
@@ -76,17 +85,17 @@ form{
     background: black;
     position: absolute;
     left: 213px;
-    bottom: 77px;
+    bottom: 95px;
 }
 
 .Book {
     display: flex;
     flex-direction: column;
     background-color: var(--colorThree);
-    height: 150px;
-    width: 100px;
+    height: 200px;
+    width: 130px;
     border: 2px solid black;
-    margin: 5px;
+    margin: 20px;
     color: black;
     justify-content: space-evenly;
     text-align: center;
